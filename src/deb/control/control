@@ -7,4 +7,4 @@ Depends: jdk (>= 1.5)
 Maintainer: Alexey Popov <cciev2005@gmail.com>
 Description: [[description]]
 Distribution: development
-Depends: default-jre | java6-runtime
+Depends: default-jre | java7-runtime
