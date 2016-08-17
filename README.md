@@ -21,3 +21,7 @@ To check that is working do:
 You should get JSON response like a:
 
 	{"id":1,"content":"Pong","date":"17/08/2016 05:09:40 +0000"} 
+
+For install on a clean ubunut box use:
+
+	curl https://raw.githubusercontent.com/cciev2005/hellopeter/master/install.sh | sh

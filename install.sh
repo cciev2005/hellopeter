@@ -1,5 +1,6 @@
 #!/bin/sh
 # build and install script
+set -e
 sudo apt-get update
 sudo apt-get -y  install git maven openjdk-7-jdk
 git clone https://github.com/cciev2005/hellopeter
