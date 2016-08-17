@@ -1,4 +1,4 @@
-#Sample Web App with an example of making .deb package with maven help
+#Sample Web App with an example of making .deb package with maven and jdeb help
 
 This is a sample web app that listens port 8080.
 You should use maven and dpkg to make and install it and its .deb package:
