@@ -9,7 +9,9 @@ You should use maven and dpkg to make and install it and its .deb package:
 
 
 When .deb package is installed then it have the following logs and pids directoies structure:
+
 logs -> /var/log/hellopeter
+
 pid -> /var/run/
 
  
