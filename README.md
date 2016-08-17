@@ -7,7 +7,7 @@ You should use maven and dpkg to make and install it and its .deb package:
 	sudo dpkg -i target/hellopeter*.deb
 
 
-When .deb package is installed then we have the following logs and pids directoies structure:
+When .deb package is installed then we have the following logs and pids directories structure:
 
 logs -> /var/log/hellopeter/
 
