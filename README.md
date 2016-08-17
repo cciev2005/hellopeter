@@ -15,6 +15,9 @@ logs -> /var/log/hellopeter/
 pid -> /var/run/
 
 To check that is working do:
+
 	curl http://127.0.0.1:8080/ping
+
 You should get JSON response like a:
+
 	{"id":1,"content":"Pong","date":"17/08/2016 05:09:40 +0000"} 
