@@ -6,4 +6,4 @@ Architecture: all
 Maintainer: Alexey Popov <cciev2005@gmail.com>
 Description: [[description]]
 Distribution: development
-Depends: default-jre | java7-runtime
+Depends: default-jre | openjdk-7-jre 
