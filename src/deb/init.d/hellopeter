@@ -26,6 +26,10 @@ DEFAULT=/etc/default/$NAME
 if [ -f "$DEFAULT" ] ; then
 	. "$DEFAULT"
 fi
+# Get configuration from /etc/hellopeter/server.conf
+if [ -f /etc/${NAME}/server.conf ] ; then
+  DAEMON_ARGS=" ${DAEMON_ARGS} "$(cat /etc/${NAME}/server.conf | tr '\n' ' ')
+fi
 
 set -e
 

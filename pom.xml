@@ -67,6 +67,17 @@
                      <linkTarget>/usr/share/jdeb/lib/${project.build.finalName}.jar</linkTarget>
                    </data>
                    <data>
+                      <src>${project.basedir}/src/deb/etc/${project.artifactId}</src>
+                      <type>directory</type>
+                      <mapper>
+                        <type>perm</type>
+                        <prefix>/etc/${project.artifactId}</prefix>
+                        <filemode>755</filemode>
+                        <user>www-data</user>
+                        <group>www-data</group>
+                      </mapper>
+                   </data>
+                   <data>
                       <src>${project.basedir}/src/deb/init.d</src>
                       <type>directory</type>
                       <mapper>

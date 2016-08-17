@@ -13,6 +13,8 @@ logs -> /var/log/hellopeter/
 
 pid -> /var/run/
 
+conf -> /etc/hellopeter/server.conf
+
 To check that is working do:
 
 	curl http://127.0.0.1:8080/ping
