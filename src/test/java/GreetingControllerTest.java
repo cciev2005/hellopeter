@@ -1,9 +1,9 @@
 package helloPeter.test.web.controller;
  
-import java.util.HashMap;
-import java.util.Map;
+//import java.util.HashMap;
+//import java.util.Map;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
+//import static org.mockito.Mockito.*;
 import junit.framework.TestCase;
 import helloPeter.Greeting;
 import helloPeter.GreetingController;
