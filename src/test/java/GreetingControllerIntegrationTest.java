@@ -3,7 +3,6 @@ package helloPeter.test.web.controller;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import junit.framework.TestCase;
 
 import helloPeter.Greeting;
 import helloPeter.GreetingController;
@@ -15,11 +14,12 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-
+import org.springframework.boot.test.autoconfigure.json.JsonTest;
 import static org.mockito.BDDMockito.given;
-import java.util.Date;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.json.*;
+import java.util.Date;
 
 /**
  * {@code @SpringBootTest} with a random port for {@link SampleTestApplication}.
@@ -27,7 +27,7 @@ import org.json.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureTestDatabase
-public class GreetingControllerIntegrationTest extends TestCase {
+public class GreetingControllerIntegrationTest {
 
 	private static final Greeting TestGreeting = new GreetingController().greeting(); 
 
@@ -45,7 +45,7 @@ public class GreetingControllerIntegrationTest extends TestCase {
 	@Test
 	public void test() {
 		String response = this.restTemplate.getForEntity("/ping", String.class).getBody();
-                assertEquals(new JSONObject(response).getString("content"),"Pong");
+                assertThat(new JSONObject(response).getString("content")).isEqualTo("Pong");
 	}
 
 }
