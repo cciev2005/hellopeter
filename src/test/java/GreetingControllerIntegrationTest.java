@@ -14,7 +14,6 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.boot.test.autoconfigure.json.JsonTest;
 import static org.mockito.BDDMockito.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -39,7 +38,8 @@ public class GreetingControllerIntegrationTest {
 
 	@Before
 	public void setup() {
-                given(this.greetingController.greeting()).willReturn(new Greeting(1,"Pong",String.format("%1$te/%1$tm/%1$tY %1$tH:%1$tM:%1$tS %1$tz", new Date())));
+                given(this.greetingController.greeting())
+                     .willReturn(new Greeting(1,"Pong",String.format("%1$te/%1$tm/%1$tY %1$tH:%1$tM:%1$tS %1$tz", new Date())));
 	}
 
 	@Test
